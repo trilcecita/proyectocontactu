@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Contacto</title>
+</head>
+<body>
+    <aside></aside>
+    <form>
+        <h3>Contacto</h3>
+        <div class="input-container">
+            <figure>
+                <img src="person_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.png" alt="Usuario">
+            </figure>
+            <input type="text" placeholder="Nombre" id="nombre" pattern="[A-Za-záéíóúÁÉÍÓÚ\s]{2,40}" title="Solo se permiten letras y espacios" required>
+        </div>
+        <div class="input-container">
+            <figure>
+                <img src="location_on_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.png" alt="Ubicación">
+            </figure>
+            <input type="text" placeholder="Dirección" id="direccion" pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z0-9\s,.-]+$" title="La dirección debe incluir letras y números" required>
+        </div>
+        <div class="input-container">
+            <figure>
+                <img src="call_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.png" alt="Teléfono">
+            </figure>
+            <select id="prefijo" required>
+                <option value="">Selecciona un prefijo</option>
+                <option value="URU">+598 Uruguay</option>
+                <option value="ESP">+34 España</option>
+                <option value="ARG">+54 Argentina</option>
+            </select>
+            <input type="tel" placeholder="Teléfono" id="telefono" pattern="(?:09\d{7}|2\d{7}|33\d{6})" title="Introduce un número de teléfono válido" required>
+        </div>
+        <div class="input-container">
+            <figure>
+                <img src="mail_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.png" alt="Email">
+            </figure>
+            <input type="email" placeholder="Email" id="email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" title="Introduce un correo electrónico válido" required>
+        </div>
+        <textarea placeholder="Escribe aquí tu mensaje" id="mensaje" pattern=".{10,}" title="El mensaje debe contener al menos 10 caracteres" required></textarea>
+        <div class="button-group">
+            <button type="reset">Borrar</button>
+            <button type="submit">Enviar</button>
+        </div>
+    </form>
+    <aside></aside>
+</body>
+</html>
